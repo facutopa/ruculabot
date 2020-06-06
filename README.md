@@ -5,8 +5,8 @@ Otro bot de twitter que surgió como side-project y cumple con lo que promete.
 
 ## Contenido
 
-1. [Cómo nacio?]
-2. [Donde levanta la data?]
+1. [Cómo nacio?](##Cómo-nacio?)
+2. [Donde levanta la data?](##Donde-levanta-la-data?)
 3. 
 
 ## Cómo nacio?
