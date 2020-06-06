@@ -1,2 +1,2 @@
 
-## Twitter Bot - @ruculabot
+## Twitter Bot - [@ruculabot](https://twitter.com/ruculabot)
