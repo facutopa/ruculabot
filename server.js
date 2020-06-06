@@ -91,16 +91,6 @@ function getDolarMEP(callback){
   });
 }
 
-function getDate()
-{
-  var today = new Date();
-  var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-  var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-  var dateTime = date+' '+time;
-  return dateTime;
-}
-
-
 /* You can use cron-job.org, uptimerobot.com, or a similar site to hit your /BOT_ENDPOINT to wake up your app and make your Twitter bot tweet. */
 
 app.all(`/${process.env.INFORMADOLAR}`, function(req, res)
@@ -184,77 +174,33 @@ function getREAL(callback){
   });
 }
 
-
-function generarProyectoRP(callback)
-{
-  request({
-    uri: 'https://www.parsehub.com/api/v2/projects/toNqTaeeeA1D/run',
-    method: 'POST',
-    form: {
-      api_key: "tSe5qCkb__Kb",
-      start_url: "https://www.rava.com/empresas/perfil.php?e=RIESGO%20PAIS",
-      start_template: "main_template"
-    }
-  }, function(err, resp, body) {
-    if(err)
-      {
-        console.log("Error generating the information from Dolarhoy", err);
-        return
-      }
-      var generarRP;
-      callback(generarRP);
-  });
+function getRiesgoPais(callback){
+  request({url: "https://www.cronista.com/MercadosOnline/json/eccheader.json",
+          gzip:true}, function(err, response, body){
+         if (err)
+        {
+          console.log("Error getting information from ElCronista MEP", err);
+          return
+        }
+        console.log(`response ${response.statusCode}`);
+        console.log(`body ${body.trim()}`);
+        var valorRP = JSON.parse(body);
+        callback(valorRP.riesgopais);
+      });
 }
 
-function getRP(callback)
-{
-  request({
-    uri: 'https://www.parsehub.com/api/v2/projects/toNqTaeeeA1D/last_ready_run/data',
-    method: 'GET',
-    gzip: true,
-    qs: {
-      api_key: "tSe5qCkb__Kb",
-      format: "json"
-    }
-  }, function(err, resp, body) {
-    if(err)
-      {
-        console.log("Error generating the information from Dolarhoy", err);
-        return
-      }
-      var mostrarRP = JSON.parse(body);;
-      callback(mostrarRP);
-  });
-}
-
-
-app.all(`/${process.env.ACTUALIZARRP}`, function(req, res){
-  
-  generarProyectoRP((generarRP) => {
-      generarRP,
-      res.sendStatus(200), 
-      function(err, data, response) {
-      if (err)
-      {
-        console.log('error pushing tweet', err);
-        res.sendStatus(500);
-      }
-      else
-      {
-        res.sendStatus(200);
-      }
-
-    }
-  })
-});
 
 //$${(parseFloat(drdolar.compraDrDolar) + (parseFloat(drdolar.compraDrDolar) * 0.3)).toFixed(2)}         
-app.all(`/${process.env.MUESTRARIESGO}`, function(req, res){
-  
-  getRP((riesgoP) => getEURO((euro) => getREAL((real)  => {
+app.all(`/${process.env.MUESTRARIESGO}`, function(req, res)
+{
+    var today = new Date();
+    var date = (today.getUTCDate()<10?'0':'') + today.getUTCDate()+'/'+ (today.getUTCMonth()<10?'0':'') + (today.getUTCMonth()+1);
+    var time = (today.getUTCHours()-3) + ":" + (today.getMinutes()<10?'0':'') + today.getMinutes();
+    var dateTime = date+' '+time;
+  getEURO((euro) => getREAL((real)  => getRiesgoPais((rp) => {
     
-    var status = `🗓️ ${riesgoP.fechaRP}
-🇦🇷Valor Riesgo Pais: ${riesgoP.riesgoPais}
+    var status = `📅`+dateTime+`
+🇦🇷Valor Riesgo Pais: ${rp.valor}
     
 🇪🇺Euro: 
 Compra: $${euro.Compra.toFixed(2)} | Venta: $${euro.Venta.toFixed(2)} | 
@@ -284,4 +230,4 @@ var listener = app.listen(process.env.PORT, function()
 {
   console.log('Your bot is running on port ' + listener.address().port);
 });
-//Url cotizacion https://mercados.ambito.com/dolar/oficial/variacion
+    
