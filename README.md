@@ -4,10 +4,10 @@ Otro bot de twitter que surgió como side-project y cumple con lo que promete.
 
 ## Contenido
 
-1. [Cómo nacio?](#Cómo-nacio?)
-2. [Dónde levanta la data?](#Donde-levanta-la-data?)
-3. [Dónde esta alojado?](#Dónde-esta-alojado?)
-4. [Updates del Bot](#Updates-del-Bot)
+1. [Cómo nacio?](#como-nacio)
+2. [Dónde levanta la data?](#donde-levanta-la-data)
+3. [Dónde esta alojado?](#donde-esta-alojado)
+4. [Updates del Bot](#updates-del-bot)
 
 
 ## Cómo nacio?
