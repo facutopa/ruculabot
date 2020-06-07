@@ -1,4 +1,3 @@
-
 # Ruculabot
 
 Otro bot de twitter que surgió como side-project y cumple con lo que promete.
@@ -51,7 +50,7 @@ El proceso de uso es muy sencillo y encima gratuito si el uso que se le va a dar
 5. Se descarga/obtiene los datos ya sea JSON, Excel o API.
 
 Con la API se generaba un "Proyecto" que simula un ingreso a la web, recolecta la informacion y luego por otro metodo retorna la data obtenida.  
-![Imgur](https://i.imgur.com/nwQ4kgr.png)
+![Imgur](https://i.imgur.com/nwQ4kgr.png)  
 Hoy en día, toda la información se obtiene de [ElCronista](https://www.cronista.com/) que actualiza con una frecuencia mayor y permite cumplir con el objetivo principal del Bot.
 
 
