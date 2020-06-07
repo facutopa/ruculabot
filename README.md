@@ -1,5 +1,5 @@
 
-# Otro bot de Twitter - [@Ruculabot](https://twitter.com/ruculabot)
+# Ruculabot
 
 Otro bot de twitter que surgió como side-project y cumple con lo que promete.
 
@@ -8,6 +8,7 @@ Otro bot de twitter que surgió como side-project y cumple con lo que promete.
 1. [Cómo nacio?](##Cómo-nacio?)
 2. [Donde levanta la data?](##Donde-levanta-la-data?)
 3. 
+
 
 ## Cómo nacio?
 
@@ -37,7 +38,8 @@ Se paso por:
 
 Inicialmente como algunos Portales no permitian, de una manera amigable recolectar los datos que mostraban, se utilizo la herramienta [ParseHub](https://www.parsehub.com/).
 
-**Que hace este harramienta?**
+![Imgur](https://i.imgur.com/q9mIbKa.png)
+### Que hace este harramienta? 
 Basicamente es una herramienta que permite hacer web scrapping en cualquier pagina sin muchos conocimientos (justo para mi).
 Sabia y se que existe una forma de hacer scrap mediante JS, pero necesitaba la informacion y esta herramienta se presento.
 El proceso de uso es muy sencillo y encima gratuito si el uso que se le va a dar es basico (como lo que necesitaba yo):
@@ -48,9 +50,24 @@ El proceso de uso es muy sencillo y encima gratuito si el uso que se le va a dar
 4. Se selecciona los datos a "recolectar"
 5. Se descarga/obtiene los datos ya sea JSON, Excel o API.
 
-Con la API se generaba un "Proyecto" que simula un ingreso a la web, recolecta la informacion y luego por otro metodo retorna la data obtenida.
-
+Con la API se generaba un "Proyecto" que simula un ingreso a la web, recolecta la informacion y luego por otro metodo retorna la data obtenida.  
+![Imgur](https://i.imgur.com/7IOqn8C.png)  
 Hoy en día, toda la información se obtiene de [ElCronista](https://www.cronista.com/) que actualiza con una frecuencia mayor y permite cumplir con el objetivo principal del Bot.
 
 
+
+## Dónde esta alojado?
+
+El segundo problema era donde iba a estar alojado el bot para su ejecución diaria.  
+Basto con una busqueda en google para encontrarme con [Glitch](https://glitch.com/).
+
+![Imgur](https://i.imgur.com/bqsh92o.png)
+
+**Qué es Glitch?**  
+Es una plataforma que permite de manera gratuita hostear web-apps.
+Además esta formada por una gran comunidad y puedo decir, con conocimiento de causa, que el soporte que tienen, es muy bueno.  
+Asi lo define el CEO:
+> - A community where you can find cool apps and websites you can’t find anywhere else. 
+> - The most innovative, powerful collaborative platform for creating, remixing and hosting apps.
+> - An effort to make the web into a creative medium where everybody expresses themselves and owns their work. 
 
