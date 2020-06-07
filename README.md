@@ -7,9 +7,7 @@ Otro bot de twitter que surgió como side-project y cumple con lo que promete.
 1. [Cómo nacio?](#Cómo-nacio?)
 2. [Dónde levanta la data?](#Donde-levanta-la-data?)
 3. [Dónde esta alojado?](#Dónde-esta-alojado?)
-4. [Dandole vida](#Dandole-vida)
-5. [Código abierto](#Código-abierto)
-6. [Updates del Bot](#Updates-del-Bot)
+4. [Updates del Bot](#Updates-del-Bot)
 
 
 ## Cómo nacio?
