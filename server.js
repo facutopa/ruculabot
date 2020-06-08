@@ -93,7 +93,7 @@ function getDolarMEP(callback){
 
 /* You can use cron-job.org, uptimerobot.com, or a similar site to hit your /BOT_ENDPOINT to wake up your app and make your Twitter bot tweet. */
 
-app.all(`/${process.env.INFORMADOLAR}`, function(req, res)
+app.all(`/${process.env.XXXXXXDolar}`, function(req, res)
 {
     var today = new Date();
     var date = (today.getUTCDate()<10?'0':'') + today.getUTCDate()+'/'+ (today.getUTCMonth()<10?'0':'') + (today.getUTCMonth()+1);
@@ -191,7 +191,7 @@ function getRiesgoPais(callback){
 
 
 //$${(parseFloat(drdolar.compraDrDolar) + (parseFloat(drdolar.compraDrDolar) * 0.3)).toFixed(2)}         
-app.all(`/${process.env.MUESTRARIESGO}`, function(req, res)
+app.all(`/${process.env.XXXXXXRiesgo}`, function(req, res)
 {
     var today = new Date();
     var date = (today.getUTCDate()<10?'0':'') + today.getUTCDate()+'/'+ (today.getUTCMonth()<10?'0':'') + (today.getUTCMonth()+1);
