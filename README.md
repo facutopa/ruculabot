@@ -52,7 +52,7 @@ Bastó con una busqueda en google para encontrarme con [Glitch](https://glitch.c
 ![Imgur](https://i.imgur.com/bqsh92o.png)
 
 **Cómo manda un tweet cada media hora?**  
-Yo use [cron-job](https://cron-job.org/en/), pero existen otras alternativas.
+Yo use [cron-job](https://cron-job.org/en/), con el ultimo update se cambio a [easycron](https://www.easycron.com/), pero existen otras alternativas.
 Una vez registrado, resto parametrizar en que momentos debia mandar un HTTP request al URL parametrizado, que utilizando glitch seria algo como:
 https://YOUR_PROJECT_NAME.glitch.me/BOT_ENDPOINT 
 
