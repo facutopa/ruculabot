@@ -64,6 +64,6 @@ Hecho todo esto, tenemos el Bot funcionando hoy en día con normalidad.
 El mismo se va actualizando con los retoques o cambios que surjan y se implementen en Glitch. Afortunadamente la plataforma tiene una herramienta que hace más sencillo el export a Github.
 
 ## Updates del Bot
->(en desarrollo)  
+> 09/07/2020 - Se cambia [cron-job](https://cron-job.org/en/) por [easycron](https://www.easycron.com/). La primera empezo a dar fallas para la ejecución y simplemente se busco una alternativa, tambien gratuita.
 
 Se ira detallando los cambios/mejoras que se hagan.
